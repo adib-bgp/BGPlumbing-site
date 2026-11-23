@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6T9GVZZVKV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6T9GVZZVKV');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>BG Plumbing | 24/7 Plumber in Metro Atlanta, GA</title>
@@ -319,6 +327,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid #ffffff22;padding-top:14px;d
 
         <h3>How it's shared</h3>
         <p>We do not sell or rent your personal information. Form submissions are delivered to us through Formspree, a form-processing service. We only share information with service providers that help us run our business, or when required by law.</p>
+        <p>We use Google Analytics to see how visitors find and use this site, such as pages viewed, device type and general location. Google may set cookies to do this. You can opt out with Google's browser add-on at tools.google.com/dlpage/gaoptout.</p>
         <p>Mobile numbers and text messaging consent are not shared with third parties or affiliates for their marketing purposes.</p>
 
         <h3>Text messages</h3>
@@ -379,7 +388,7 @@ var FORM_ENDPOINT = "https://formspree.io/f/maeoqpbg";
     if(!FORM_ENDPOINT){show('Online requests are not connected yet. Please call 678-791-5254 to check availability.');return}
     btn.disabled=true;btn.textContent='Sending...';
     fetch(FORM_ENDPOINT,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
-      .then(function(r){if(!r.ok)throw 0;f.reset();show('Thanks! Your request was sent. We will contact you shortly to confirm a time.')})
+      .then(function(r){if(!r.ok)throw 0;f.reset();if(window.gtag)gtag('event','generate_lead',{method:'quote_form'});show('Thanks! Your request was sent. We will contact you shortly to confirm a time.')})
       .catch(function(){show('Your request could not be sent. Please call 678-791-5254.')})
       .then(function(){btn.disabled=false;btn.textContent='Check availability'});
   });
@@ -395,6 +404,13 @@ document.querySelectorAll('[data-copy]').forEach(function(b){
     var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent=b.dataset.copy==='email'?'Copy email':'Copy number'},1500)};
     try{navigator.clipboard.writeText(t).then(done,function(){sel(b.dataset.copy)})}catch(e){sel(b.dataset.copy)}
   });
+});
+/* Analytics: count taps on any phone or email link as leads */
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');
+  if(!a||!window.gtag)return;
+  var tel=a.getAttribute('href').indexOf('tel:')===0;
+  gtag('event',tel?'phone_call_click':'email_click',{link_text:a.textContent.trim().slice(0,60)});
 });
 function sel(id){var r=document.createRange();r.selectNodeContents(document.getElementById(id));var s=getSelection();s.removeAllRanges();s.addRange(r)}
 </script>
