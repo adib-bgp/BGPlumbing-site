@@ -12,7 +12,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>BG Plumbing | 24/7 Plumber in Metro Atlanta, GA</title>
-<meta name="description" content="BG Plumbing is a commercial and residential plumber serving Metro Atlanta: Atlanta, Marietta, Sandy Springs, Roswell, Alpharetta, Norcross, Duluth, Lawrenceville, Decatur and more. 25+ years of experience, 24/7 emergency service and a free $199 plumbing evaluation for homes and businesses. Leak detection, sewer and drain cleaning, water heater and gas line installation. Call 678-791-5254.">
+<meta name="description" content="BG Plumbing is a commercial and residential plumber serving Metro Atlanta: Atlanta, Marietta, Sandy Springs, Roswell, Alpharetta, Norcross, Duluth, Lawrenceville, Decatur and more. 25+ years of experience, 24/7 emergency service and a free water heater (up to $1,500) when BG Plumbing installs it, plus a free $199 plumbing evaluation. Leak detection, sewer and drain cleaning, water heater and gas line installation. Call 678-791-5254.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -75,6 +75,7 @@ section{padding-block:64px}
 .svc{background:var(--surface);padding:26px 24px;display:grid;gap:8px;align-content:start}
 .svc h3{font-size:26px;font-weight:700}
 .svc p{color:var(--muted);font-size:16px}
+.svc p a{color:var(--copper);font-weight:700}
 .svc .tag{font-family:var(--mono);font-size:12px;color:var(--copper);letter-spacing:.06em}
 
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;counter-reset:s}
@@ -150,6 +151,15 @@ footer .legal{grid-column:1/-1;border-top:1px solid #ffffff22;padding-top:14px;d
 .form-msg{font-weight:600;padding:12px 14px;border-radius:6px;background:var(--copper-soft);color:var(--ink)}
 @media (max-width:760px){.fields{grid-template-columns:1fr}}
 @media (max-width:760px){.offer{grid-template-columns:1fr}}
+.side{display:grid;gap:16px;align-content:start;min-width:0}
+.checks.signs{background:transparent;border:1.5px solid var(--copper);padding:16px 20px}
+.fine{grid-column:1/-1;font-size:13.5px;color:var(--muted);max-width:80ch}
+#evaluation{padding-block:56px 8px}
+.eval{display:grid;grid-template-columns:1.05fr 1fr;gap:36px;align-items:start;border:1px solid var(--line);border-radius:14px;padding:clamp(22px,4vw,40px)}
+.eval>div{display:grid;gap:12px;align-content:start;min-width:0}
+.eval h2{font-size:clamp(32px,4.5vw,44px);font-weight:700;text-transform:uppercase}
+.eval .checks{background:var(--tint)}
+@media (max-width:760px){.eval{grid-template-columns:1fr}}
 @media (max-width:760px){
   .services,.steps,.cards,.area{grid-template-columns:1fr}
   .hero{padding-block:28px 48px}
@@ -171,12 +181,12 @@ footer .legal{grid-column:1/-1;border-top:1px solid #ffffff22;padding-top:14px;d
     </div>
   </div>
   <div class="wrap hero">
-    <span class="label">25+ years experience · Metro Atlanta, GA · Open 24/7</span>
-    <h1>Metro Atlanta plumbing, <span>done right.</span></h1>
-    <p class="lede">With over 25 years of experience, BG Plumbing gets the job done right the first time for homes and businesses across Metro Atlanta. Emergency service is available 24 hours a day, 7 days a week.</p>
+    <span class="label">Limited offer · Metro Atlanta, GA · Open 24/7</span>
+    <h1>Your new water heater, <span>free.</span></h1>
+    <p class="lede">Have BG Plumbing install your new water heater and we'll cover the water heater itself, up to $1,500. Gas or electric, for homes and businesses across Metro Atlanta, backed by 25+ years of experience.</p>
     <div class="actions">
       <a class="btn primary" href="tel:+16787915254">Call 678-791-5254</a>
-      <a class="btn ghost" href="#offer">Get a free evaluation</a>
+      <a class="btn ghost" href="#book">Claim my free water heater</a>
     </div>
   </div>
   
@@ -188,26 +198,34 @@ footer .legal{grid-column:1/-1;border-top:1px solid #ffffff22;padding-top:14px;d
       <div class="offer">
         <div>
           <span class="label">Limited offer</span>
-          <h2><span class="free">Free</span> plumbing evaluation for homes and businesses</h2>
-          <span class="price">$199 value, yours free</span>
-          <p>Whether it's your house or your business, we'll look over your plumbing from top to bottom and give you a full breakdown of its overall health. While we're there, we walk you through what needs attention and what can wait, so you can plan ahead and avoid costly surprises, from a flooded basement at home to downtime at your business.</p>
-          <p class="cta-line"><strong>Call or fill out the form below to see availability.</strong></p>
+          <h2><span class="free">Free</span> water heater when we install it</h2>
+          <span class="price">We cover the water heater, up to $1,500</span>
+          <p>If your water heater is old, leaking or not keeping up, now is the time to replace it. Have BG Plumbing do the installation and the new water heater is on us, up to $1,500. You get the installation price up front and approve it before any work starts.</p>
+          <p class="cta-line"><strong>Call or fill out the form below to claim it.</strong></p>
           <div class="actions" style="margin:0"><a class="btn primary" href="tel:+16787915254">Call 678-791-5254</a><a class="btn outline" href="#book">Fill out the form</a></div>
         </div>
-        <ul class="checks">
-          <li class="label" style="display:block">What we check</li>
-          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Water heater condition and age</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Visible pipes and supply lines checked for leaks</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Drains and sewer line flow</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Toilets, faucets and fixtures</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Water pressure</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Shutoff valves</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Gas line connections</span></li>
-        </ul>
+        <div class="side">
+          <ul class="checks">
+            <li class="label" style="display:block">What you get</li>
+          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>The water heater itself, covered up to $1,500</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Professional installation by BG Plumbing</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Gas or electric, for homes and businesses</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Installation price up front, approved by you first</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>25+ years of experience, done right the first time</span></li>
+          </ul>
+          <ul class="checks signs">
+            <li class="label" style="display:block">Signs it's time to replace</li>
+          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Rust, corrosion or water around the base</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Running out of hot water faster than before</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Rumbling or popping noises from the tank</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Rusty or discolored hot water</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Your water heater is 10+ years old</span></li>
+          </ul>
+        </div>
         <form class="book" id="book" novalidate>
           <div class="book-head">
-            <span class="label">Request your free evaluation</span>
-            <p>Tell us how to reach you and when works best. We'll get back to you to confirm a time.</p>
+            <span class="label">Claim your free water heater</span>
+            <p>Tell us how to reach you and when works best. We'll call to confirm a time and give you the installation price up front.</p>
           </div>
           <div class="fields">
             <label for="f-name">Full name<input id="f-name" name="name" autocomplete="name" required></label>
@@ -215,10 +233,11 @@ footer .legal{grid-column:1/-1;border-top:1px solid #ffffff22;padding-top:14px;d
             <label for="f-email">Email <span class="opt">(optional)</span><input id="f-email" name="email" type="email" autocomplete="email"></label>
             <label for="f-city">Address or city<input id="f-city" name="address" autocomplete="street-address" required></label>
             <label for="f-service">What do you need?<select id="f-service" name="service">
+              <option>Free water heater (with installation)</option>
               <option>Free $199 plumbing evaluation (home or business)</option>
+              <option>Water heater repair</option>
               <option>Leak or burst pipe</option>
               <option>Sewer or drain clog</option>
-              <option>Water heater</option>
               <option>Gas line</option>
               <option>Something else</option>
             </select></label>
@@ -229,7 +248,14 @@ footer .legal{grid-column:1/-1;border-top:1px solid #ffffff22;padding-top:14px;d
               <option>Weekend</option>
               <option>As soon as possible</option>
             </select></label>
-            <label for="f-notes" class="wide">Anything we should know? <span class="opt">(optional)</span><textarea id="f-notes" name="notes" rows="3"></textarea></label>
+            <label for="f-wh" class="wide">Current water heater <span class="opt">(optional, helps us quote)</span><select id="f-wh" name="water_heater_type">
+              <option>Not sure</option>
+              <option>Gas, tank</option>
+              <option>Electric, tank</option>
+              <option>Tankless</option>
+              <option>Doesn't apply</option>
+            </select></label>
+            <label for="f-notes" class="wide">Anything we should know? <span class="opt">(optional)</span><textarea id="f-notes" name="notes" rows="3" placeholder="e.g. no hot water, leaking tank, about 12 years old"></textarea></label>
           </div>
           <input type="hidden" name="_subject" value="New website request - BG Plumbing">
           <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Leave this empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
@@ -237,6 +263,30 @@ footer .legal{grid-column:1/-1;border-top:1px solid #ffffff22;padding-top:14px;d
           <button class="btn primary" type="submit" id="f-submit" aria-describedby="f-consent">Check availability</button>
           <p class="consent" id="f-consent">By submitting this form, you agree that BG Plumbing may call, text or email you about your request. Message and data rates may apply. Reply STOP to opt out of texts at any time. See our <a href="#privacy">Privacy Policy</a>.</p>
         </form>
+        <p class="fine">Offer covers the cost of the water heater unit up to $1,500 when BG Plumbing performs the installation. Installation is priced separately and quoted before work begins. Limited time offer; call 678-791-5254 for details.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="evaluation">
+    <div class="wrap">
+      <div class="eval">
+        <div>
+          <span class="label">Not sure what you need?</span>
+          <h2>Free plumbing evaluation</h2>
+          <span class="price">$199 value, yours free</span>
+          <p>For your home or business, we look over your plumbing from top to bottom, give you a full breakdown of its health, and walk you through what needs attention and what can wait.</p>
+          <div class="actions" style="margin:0"><a class="btn primary" href="#book" data-service="Free $199 plumbing evaluation (home or business)">Request a free evaluation</a></div>
+        </div>
+        <ul class="checks">
+          <li class="label" style="display:block">What we check</li>
+          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Water heater condition and age</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Visible pipes and supply lines checked for leaks</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Drains and sewer line flow</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Toilets, faucets and fixtures</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Water pressure and shutoff valves</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="var(--copper)" stroke-width="2.5"/></svg><span>Gas line connections</span></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -250,7 +300,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid #ffffff22;padding-top:14px;d
       <div class="services">
         <div class="svc"><span class="tag">LEAKS</span><h3>Leak detection &amp; burst pipes</h3><p>Hidden leaks found and burst pipes repaired fast, day or night.</p></div>
         <div class="svc"><span class="tag">DRAIN</span><h3>Sewer &amp; drain cleaning</h3><p>Clogged drains and sewer lines cleared with professional snaking.</p></div>
-        <div class="svc"><span class="tag">WATER HEATERS</span><h3>Water heater installation</h3><p>New water heaters installed, plus repairs to get your hot water back.</p></div>
+        <div class="svc"><span class="tag">WATER HEATERS</span><h3>Water heater installation</h3><p>Gas and electric water heaters installed and repaired. Right now the water heater is free, up to $1,500, when we install it. <a href="#offer">See the offer</a></p></div>
         <div class="svc"><span class="tag">GAS</span><h3>Gas line installation</h3><p>Gas lines run safely for appliances, water heaters and new equipment.</p></div>
         <div class="svc"><span class="tag">FIXTURES</span><h3>Toilets, faucets &amp; sinks</h3><p>Running toilets, worn valves, new fixtures installed and sealed properly.</p></div>
         <div class="svc"><span class="tag">COMMERCIAL</span><h3>Commercial &amp; rental properties</h3><p>Offices, shops and restaurants, plus repairs and turnovers for landlords and property managers.</p></div>
@@ -315,8 +365,8 @@ footer .legal{grid-column:1/-1;border-top:1px solid #ffffff22;padding-top:14px;d
         <p>This policy explains what information BG Plumbing Commercial &amp; Residential, LLC ("BG Plumbing," "we," "us") collects through bgplumbingga.com and how we use it.</p>
 
         <h3>Information we collect</h3>
-        <p>When you fill out our request form, we collect the information you choose to give us: your name, phone number, email (optional), address or city, the service you need, your preferred time and any notes. If you call, text or email us, we receive your phone number or email and what you send us.</p>
-        <p>Like most websites, our hosting provider (GitHub Pages) and font provider (Google Fonts) may automatically receive basic technical information such as your IP address and browser type when the page loads. We do not use advertising or tracking cookies on this site.</p>
+        <p>When you fill out our request form, we collect the information you choose to give us: your name, phone number, email (optional), address or city, the service you need, your current water heater type, your preferred time and any notes. If you call, text or email us, we receive your phone number or email and what you send us.</p>
+        <p>Like most websites, our hosting provider (GitHub Pages) and font provider (Google Fonts) may automatically receive basic technical information such as your IP address and browser type when the page loads. We do not use advertising cookies on this site.</p>
 
         <h3>How we use it</h3>
         <ul>
@@ -395,7 +445,7 @@ var FORM_ENDPOINT = "https://formspree.io/f/maeoqpbg";
 })();
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Plumber","name":"BG Plumbing Commercial & Residential, LLC","telephone":"+1-678-791-5254","email":"24bgplumbing@gmail.com","openingHours":"Mo-Su 00:00-23:59","makesOffer":{"@type":"Offer","name":"Free plumbing evaluation for homes and businesses ($199 value)","price":"0","priceCurrency":"USD"},"slogan":"For all your commercial & residential plumbing needs","areaServed":[{"@type":"Place","name":"Metro Atlanta, GA"},"Atlanta","Sandy Springs","Roswell","Alpharetta","Johns Creek","Dunwoody","Brookhaven","Marietta","Smyrna","Decatur","Tucker","Norcross","Peachtree Corners","Duluth","Suwanee","Lawrenceville","Lilburn","Snellville","Stone Mountain","Cumming"]}
+{"@context":"https://schema.org","@type":"Plumber","name":"BG Plumbing Commercial & Residential, LLC","telephone":"+1-678-791-5254","email":"24bgplumbing@gmail.com","openingHours":"Mo-Su 00:00-23:59","makesOffer":[{"@type":"Offer","name":"Free water heater, up to $1,500, with installation by BG Plumbing"},{"@type":"Offer","name":"Free plumbing evaluation for homes and businesses ($199 value)","price":"0","priceCurrency":"USD"}],"slogan":"For all your commercial & residential plumbing needs","areaServed":[{"@type":"Place","name":"Metro Atlanta, GA"},"Atlanta","Sandy Springs","Roswell","Alpharetta","Johns Creek","Dunwoody","Brookhaven","Marietta","Smyrna","Decatur","Tucker","Norcross","Peachtree Corners","Duluth","Suwanee","Lawrenceville","Lilburn","Snellville","Stone Mountain","Cumming"]}
 </script>
 <script>
 document.querySelectorAll('[data-copy]').forEach(function(b){
@@ -405,6 +455,8 @@ document.querySelectorAll('[data-copy]').forEach(function(b){
     try{navigator.clipboard.writeText(t).then(done,function(){sel(b.dataset.copy)})}catch(e){sel(b.dataset.copy)}
   });
 });
+/* Buttons that pick a service in the form */
+document.querySelectorAll('[data-service]').forEach(function(a){a.addEventListener('click',function(){var sel=document.getElementById('f-service');sel.value=a.dataset.service})});
 /* Analytics: count taps on any phone or email link as leads */
 document.addEventListener('click',function(e){
   var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');
